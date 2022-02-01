@@ -3,26 +3,24 @@
 #include "../DBclass.h"
 
 class DBconnectionFake : public DBConnection {
-    std::map<std::string, std::string, std::less<>> validCredentials = {{"user1", "password1"},
+    const std::map<std::string, std::string, std::less<>> validCredentials = {{"user1", "password1"},
                                                            {"user2", "password2"}};
 
 public:
     bool login(const std::string &username, const std::string &password) final
     {
-      for (const auto &credentials: validCredentials) {
-        if (username == credentials.first &&  password == credentials.second)
-          return true;
-      }
-      return false;
+       return std::any_of(validCredentials.begin(), validCredentials.end(),
+                          [&username, &password](const std::pair<std::string, std::string> &p)
+                          { return (p.first == username && p.second == password);
+        });
     }
 
     bool logout(const std::string &username) final
     {
-      for (const auto &credentials: validCredentials)
-      {
-        if (username == credentials.first) return true;
-      }
-      return false;
+      return std::any_of(validCredentials.begin(), validCredentials.end(),
+                         [&username](const std::pair<std::string, std::string> &p)
+                         { return (p.first == username);
+                         });
     }
 
     virtual ~DBconnectionFake() = default;
