@@ -1,6 +1,8 @@
 add_executable(DoublesUnitTestMain
    SecurityMockUnitTest.cpp
    DBStubAndSpyUnitTest.cpp
+   DBDummyUnitTest.cpp
+   DBFakeUnitTest.cpp
    DoublesUnitTestMain.cpp
 )
 

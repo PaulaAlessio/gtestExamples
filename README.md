@@ -46,7 +46,9 @@ of gtest-gmock. [Read the docs](http://google.github.io/googletest/).
 - Testing stuff without refactoring the existing code
 
 ## References
- - [Everything about gtest](http://google.github.io/googletest/)
+ - [Everything about gtest/gmock](http://google.github.io/googletest/)
+ - [Google test code and docs (v1.8.1)](https://github.com/google/googletest/blob/release-1.8.1)  
+ - [More docu from ElectricRCAircraftGuy](https://github.com/ElectricRCAircraftGuy/eRCaGuy_dotfiles/tree/master/googletest)  
  - [Martin Fowler on test doubles](https://martinfowler.com/bliki/TestDouble.html)
  - [Why testing and how (blog)](https://blog.devgenius.io/why-testing-and-how-d7cf96c7223f)  
  - [Unittest (blog)](https://blog.devgenius.io/unit-tests-c70618dc1e25)  

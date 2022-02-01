@@ -7,6 +7,7 @@ class DBConnectionStubAndSpy: public DBConnection
  public:
     MOCK_METHOD2(login, bool(const std::string&, const std::string&));
     MOCK_METHOD1(logout, bool(const std::string &));
+    virtual ~DBConnectionStubAndSpy() = default;
 };
 
 namespace testing

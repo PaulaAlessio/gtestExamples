@@ -15,4 +15,5 @@ public:
     // Some fancy implementation of a database logout goes here
     return true;
   }
+  virtual ~DBConnection() = default;
 };
