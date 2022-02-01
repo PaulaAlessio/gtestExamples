@@ -37,8 +37,8 @@ namespace testing
   // Now we have to instantiate the tests for the types you want to test
   using myTypes =  Types<int, unsigned int, float, double>;
   INSTANTIATE_TYPED_TEST_CASE_P(OnTheFlyAndPreCalculated,    // Instance name
-                                OperationsTest,             // Test case name
-                                myTypes);  // Type list
+                                OperationsTest,              // Test case name
+                                myTypes);                    // Type list
 }
 
 

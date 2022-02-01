@@ -24,16 +24,33 @@ namespace testing
 {
   TEST(Security, SecurityOnWindowOpenIsCalledDoorOpenIsCalled)
   {
+    // Given
     auto window = std::make_unique<MockWindow>();
     auto door   = std::make_unique<MockDoor>();
-    EXPECT_CALL(*window,open).Times(Exactly(1));
-    EXPECT_CALL(*door,open).Times(Exactly(1));
+
+    // Then
     EXPECT_CALL(*window,close).Times(Exactly(1));
     EXPECT_CALL(*door,close).Times(Exactly(1));
+
+    // When
     Security security(std::move(window), std::move(door));
     security.on();
+  }
+
+  TEST(Security, SecurityOffWindowCloseIsCalledDoorCloseIsCalled)
+  {
+    // Given
+    auto window = std::make_unique<MockWindow>();
+    auto door   = std::make_unique<MockDoor>();
+
+    // Then
+    EXPECT_CALL(*window,open).Times(Exactly(1));
+    EXPECT_CALL(*door,open).Times(Exactly(1));
+
+    // When
+    Security security(std::move(window), std::move(door));
     security.off();
-  }  
+  }
 }
 
 
