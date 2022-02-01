@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "RingOperations.h"
+#include "../RingOperations.h"
 
 namespace testing
 {
