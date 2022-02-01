@@ -1,6 +1,7 @@
 add_executable(AppUnitTestMain
                AppUnitTestMain.cpp
-               OperationsUnitTest.cpp)
+        OperationsTypeParamUnitTest.cpp
+        OperationsValueParamUnitTest.cpp)
 
 target_include_directories(AppUnitTestMain PRIVATE
         "/opt/googletest/googletest/include/"
