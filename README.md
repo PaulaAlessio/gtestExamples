@@ -2,10 +2,11 @@
 
 ## Motivations for unit testing
  - Verify that your work is done correctly,
+ - Error detection is closer to development,  
  - It is a necessary step for CI,
  - Refactorisations come with lower Risk,
- - They're (execution) low cost,  
- - Writing testable code improves your design.
+ - They're low cost (their execution is fast),  
+ - Writing testable code improves your design,
  - [...]
 
 ## Do's and dont's in testing **WIP**
